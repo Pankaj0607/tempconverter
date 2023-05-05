@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Converter</title>
+  <link rel="icon" type="image/x-icon" href="image.ico">
+  <style>
+    /* Style for the page */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #E5E5E5;
+    }
+    
+    /* Style for the header */
+    h1 {
+      background-color: #00A6ED;
+      color: white;
+      padding: 20px;
+      margin: 0;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      font-size: 3rem;
+    }
+    
+    /* Style for the input fields */
+    label, input, select {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input[type="text"], select {
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #00A6ED;
+      border-radius: 0;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1.2rem;
+      background-color: #E5E5E5;
+      color: #1F1F1F;
+    }
+    
+    input[type="text"]:focus, select:focus {
+      outline: none;
+      border-color: #1F1F1F;
+    }
+    
+    /* Style for the button */
+    button {
+      background-color: #00A6ED;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    button:hover {
+      background-color: #1F1F1F;
+    }
+    
+    /* Style for the result field */
+    #result {
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      text-align: center;
+      background-color: #00A6ED;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    #result:focus {
+      outline: none;
+      background-color: white;
+      color: #1F1F1F;
+    }
+    
+    /* Style for the container and box */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .box {
+      width: 400px;
+      height: 500px;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+      <div class="box">
+        <h1>Temperature Converter</h1>
+        <div>
+          <label for="tempInput">Enter temperature:</label>
+          <input type="text" id="tempInput" placeholder="Temperature...">
+        </div>
+        <div>
+          <label for="unitSelect">Select unit:</label>
+          <select id="unitSelect">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+        <div>
+          <button id="convertBtn">Convert</button>
+        </div>
+        <div>
+          <label for="result">Result:</label>
+          <input type="text" id="result" readonly>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  
+        </html>
